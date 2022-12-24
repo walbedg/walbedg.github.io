@@ -1,106 +1,70 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Pueba Json</title>
+        <title>Felicidades Wendy</title>
         <style>
-            #rgsPersonas
-                {
-                    width:100%;
-                    border: solid 1px black;
-                    
-                }
-                #rgsPersonas thead
-                {
-                    
-                    background-color: black;
-                    color:white;
-                }
+            img
+            {
+                
+            }
+            body
+            {
+                width: 98%;
+                height: auto;
+                background-color: aquamarine;
+                padding: 20px;
+            }
+            #contenedor
+            {
+                width: auto;
+                height: fit-content;
+                border: 2px solid black;
+                border-radius: 25PX;
+                background-color: azure;
+                padding: 10px;
+
+            }
+            p
+            {
+                font-family: comic sans ms;
+            }
+
+            h1
+            {
+                font-family: comic sans ms;
+                font-size: 50px; 
+            }
         </style>
-
     </head>
-<body>
-    <?php
-    $personas=array();
-    if (is_file('persona.json')) {
-        # code...
-        $json= file_get_contents('persona.json');
-        $personas=json_decode($json, true);
-
-        var_dump($personas);
-    }
-    if ($_POST) {
-        # code...
-        $datos=array();
-        $datos[]=$_POST;
-
-        $json= json_encode($datos);
-        file_put_contents('persona.json', $json);
-    }
-
-    ?>
-    <header>
-
-    </header>
-    <section>
-        <h3>Agregar Personas</h3>
-        <form action="index.php" method="post">
-            <table>
-                <tr>
-                    <th>Nombre</th>
-                    <td><input type="text" name="txtNombre"></td>
-                </tr>
-                <tr>
-                    <th>Cedula</th>
-                    <td><input type="text" name="txtCedula"></td>
-                </tr>
-                <tr>
-                    <th>Telefono</th>
-                    <td><input type="text" name="txtTelefono"></td>
-                </tr>
-                <tr>
-                    <th>Correo</th>
-                    <td><input type="text" name="txtCorreo"></td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center">
-                        <button type="submit">Guardar</button>
-
-                    </td>
-                </tr>
+    <body>
+    <center> 
+        <div id="contenedor">
+            
+           
+           <h2>Felicidades en tu Dia</h2>
+           
+           <h1>Wendy Yokasta Diaz Garcia</h1>
+            <iframe width="420" height="315"
+            src="https://www.youtube.com/watch?v=_l9ycooMgxk">
+            </iframe>
+              <s></s><b>
+            <p>
+                Querida hermana mía, hoy es tu día y estoy aquí para desearte una mucha felicidad, paz y salud en tus días. 
+            </p>
+            
+            <p>
+               
+                Todos los días agradezco la suerte de tener una hermana como tú y por ser parte de tu vida. 
                 
-            </table>
-        </form>
-        <fieldset>
-            <legend> PERSONAS REGISTRADAS</legend>
-            <table id="rgsPersonas">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Cedula</th>
-                        <th>Telefono</th>
-                        <th>Correo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php 
-                        foreach ($personas as $persona)
-                        {
-                            echo <<<FILA
-                                <tr>
-                                    <td>{$persona['txtNombre']}<td>
-                                    <td>{$persona['txtCedula']}<td>
-                                    <td>{$persona['txtTelefono']}<td>
-                                    <td>{$persona['txtCorreo']}<td>
-                                </tr>
-FILA;
-                        }
-                    ?>
-                </tbody>
-                
-            </table>
-        </fieldset>
+            </p>
+            
+            <p>
+                Que en este cumpleaños todos tus deseos se hagan realidad y que tengas un día repleto de amor y alegrías.
+            </p></b></s>
+            <img src="minio.gif" alt="gif">
 
-    </section>
 
-</body>
+        </div>
+    </center>
+    </body>
 </html>
