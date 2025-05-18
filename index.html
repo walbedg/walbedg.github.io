@@ -1,24 +1,448 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Walbedg Template</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-    .w3-sidebar a {font-family: "Roboto", sans-serif}
-    body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
-    </style>
-  </head>
-<body class="w3-content" style="max-width:1200px">
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golden Eart - Joyería</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-	<a href="0.html" class="w3-bar-item w3-button">Walbe Diaz Garcia</a> 
-	<a href="1.html" class="w3-bar-item w3-button">Plantilla 1</a>
-	<a href="2.html" class="w3-bar-item w3-button">Plantilla 2</a>
-	<a href="3.html" class="w3-bar-item w3-button">Plantilla 3</a>
-	<a href="4.html" class="w3-bar-item w3-button">Plantilla 4</a>
+</head>
+<body>
+  <main>
+    <section id="inicio">
+  <div class="carrusel">
+    <div class="slides">
+      <img src="img/joya1.jpg" alt="Joya 1">
+      <img src="img/joya2.jpg" alt="Joya 2">
+      <img src="img/joya3.jpg" alt="Joya 3">
+      <img src="img/joya4.jpg" alt="Joya 4">
+      <img src="img/joya5.jpg" alt="Joya 5">
+    </div>
+  </div>
+    <div class="inicio-header">
+        <!-- Header dentro de la sección inicio -->
+        <a href="#inicio" class="logo">
+        <img src="img/logo.png" alt="Golden Eart Logo">
+        </a>
+        <h1 class="logo2">GOLDEN EART</h1>
+        <nav class="navbar">
+  <ul class="menu">
+    <li><a href="#inicio">Inicio</a></li>
+
+    <li class="dropdown">
+      <a href="#productos">Productos</a>
+      <ul class="submenu">
+        <li><a href="#anillos">Anillos</a></li>
+        <li><a href="#collares">Collares</a></li>
+        <li><a href="#pulseras">Pulseras</a></li>
+        <li><a href="#aretes">Aretes</a></li>
+        <li><a href="#nuevas">Nuevas Colecciones</a></li>
+        <li><a href="#ofertas">Ofertas Especiales</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#nosotros">Sobre Nosotros</a>
+      <ul class="submenu">
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#mision">Misión y Visión</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#blog">Blog</a>
+      <ul class="submenu">
+        <li><a href="#tendencias">Tendencias</a></li>
+        <li><a href="#cuidado">Consejos de Cuidado</a></li>
+        <li><a href="#historias">Historias de Clientes</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#contacto">Contacto</a>
+      <ul class="submenu">
+        <li><a href="#formulario">Formulario</a></li>
+        <li><a href="#informacion">Información</a></li>
+        <li><a href="#ubicacion">Ubicación y Horarios</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#faq">FAQ</a>
+      <ul class="submenu">
+        <li><a href="#preguntas">Preguntas Frecuentes</a></li>
+        <li><a href="#devoluciones">Política de Devoluciones</a></li>
+        <li><a href="#envios">Envíos y Entregas</a></li>
+      </ul>
+    </li>
+</nav>
+        <div class="carrito-icono" onclick="mostrarCarrito()">
+         <a href="#carrito" class="icono-header">
+  <i class="fas fa-shopping-cart"></i>
+</a><span id="contador-carrito">0</span>
+        </div>
+            <div class="usuario-icono" id="usuario-icono" onclick="abrirModalUsuario()">
+            <a href="#inicio-sesion" class="icono-header">
+  <i class="fas fa-user"></i>
+</a><span id="usuario-nombre">Iniciar sesión</span>
+            </div>
+    <div id="cerrar-sesion" style="display:none; position:absolute; top:60px; right:70px;">
+        <button onclick="cerrarSesion()">Cerrar sesión</button>
+        </div>
+    </div>
+            <div class="shop-now-overlay">
+                <a href="#productos" class="shop-now-button">COMPRAR</a>
+             </div>
+</section>
+<div class="filtros-productos">
+  <button class="filtro-btn activo" data-categoria="todos">Todos</button>
+  <button class="filtro-btn" data-categoria="anillos">Anillos</button>
+  <button class="filtro-btn" data-categoria="collares">Collares</button>
+  <button class="filtro-btn" data-categoria="pulseras">Pulseras</button>
+  <button class="filtro-btn" data-categoria="aretes">Aretes</button>
+</div>
+     
+<section id="productos">
+  <h2 class="section-title">Nuestros Productos</h2>
+
+  <!-- Categorías -->
+  <div class="categorias">
+    <div class="categoria-card">
+      <img src="img/anillos.jpg" alt="Anillos">
+      <h3>Anillos</h3>
+      <a href="#anillos" class="ver-mas">Ver más</a>
+    </div>
+    <div class="categoria-card">
+      <img src="img/collares.jpg" alt="Collares">
+      <h3>Collares</h3>
+      <a href="#collares" class="ver-mas">Ver más</a>
+    </div>
+    <div class="categoria-card">
+      <img src="img/pulseras.jpg" alt="Pulseras">
+      <h3>Pulseras</h3>
+      <a href="#pulseras" class="ver-mas">Ver más</a>
+    </div>
+    <div class="categoria-card">
+      <img src="img/aretes.jpg" alt="Aretes">
+      <h3>Aretes</h3>
+      <a href="#aretes" class="ver-mas">Ver más</a>
+    </div>
+  </div>
+
+  <!-- Nuevas Colecciones y Ofertas -->
+  <div class="extra-productos">
+    <div class="destacado">
+      <img src="img/nueva-coleccion.jpg" alt="Nueva Colección">
+      <h3>Nueva Colección</h3>
+      <p>Descubre las joyas más recientes.</p>
+      <a href="#nuevas" class="ver-mas">Explorar</a>
+    </div>
+    <div class="destacado">
+      <img src="img/ofertas.jpg" alt="Ofertas Especiales">
+      <h3>Ofertas Especiales</h3>
+      <p>Joyas únicas a precios increíbles.</p>
+      <a href="#ofertas" class="ver-mas">Ver Ofertas</a>
+    </div>
+  </div>
+  <script>
+  const botones = document.querySelectorAll('.filtro-btn');
+  const productos = document.querySelectorAll('.producto');
+
+  botones.forEach(boton => {
+    boton.addEventListener('click', () => {
+      document.querySelector('.filtro-btn.activo').classList.remove('activo');
+      boton.classList.add('activo');
+      const categoria = boton.getAttribute('data-categoria');
+
+      productos.forEach(producto => {
+        if (categoria === 'todos' || producto.getAttribute('data-categoria') === categoria) {
+          producto.style.display = 'block';
+        } else {
+          producto.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
+</section>
+
+
+    <section id="nosotros" class="seccion-nosotros">
+  <h2 class="titulo-seccion">Sobre Nosotros</h2>
+
+  <div class="contenedor-nosotros">
+    <div class="bloque-nosotros">
+      <h3>Nuestra Historia</h3>
+      <p>
+        Golden Eart nace de la pasión por la joyería artesanal y el deseo de ofrecer piezas únicas
+        que reflejan elegancia, identidad y estilo. Con años de experiencia, nos hemos convertido en una marca de confianza.
+      </p>
+    </div>
+
+    <div class="bloque-nosotros">
+      <h3>Misión</h3>
+      <p>
+        Brindar a nuestros clientes joyas exclusivas que destaquen por su calidad, diseño y significado, celebrando cada momento especial.
+      </p>
+
+      <h3>Visión</h3>
+      <p>
+        Ser una joyería reconocida a nivel nacional e internacional, innovando en cada colección y generando confianza y fidelidad.
+      </p>
+    </div>
+
+    <div class="bloque-nosotros equipo">
+      <h3>Equipo</h3>
+      <div class="miembros-equipo">
+        <div class="miembro">
+          <img src="img/walbe.jpeg" alt="equipo 1">
+          <p>Walbe Diaz Garcia<br><span>2010-1109</span></p>
+        </div>
+        <div class="miembro">
+          <img src="img/aristides.JPG" alt="equipo 2">
+          <p>Jose Aristides Martinez<br><span>2012-0726</span></p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="blog" class="blog-section">
+  <h2 class="titulo-seccion">Nuestro Blog</h2>
+
+  <div class="blog-contenedor">
+    <!-- Artículo 1 -->
+    <div class="blog-articulo">
+      <img src="img/blog1.jpg" alt="Tendencias en joyería 2025">
+      <h3>Tendencias en Joyería 2025</h3>
+      <p>Descubre los estilos, materiales y diseños que marcarán la moda en joyería este año.</p>
+      <a href="#" class="leer-mas">Leer más</a>
+    </div>
+
+    <!-- Artículo 2 -->
+    <div class="blog-articulo">
+      <img src="img/blog2.jpg" alt="Cómo cuidar tus joyas">
+      <h3>Cómo cuidar tus joyas</h3>
+      <p>Tips esenciales para mantener el brillo y la calidad de tus piezas favoritas.</p>
+      <a href="#" class="leer-mas">Leer más</a>
+    </div>
+
+    <!-- Artículo 3 -->
+    <div class="blog-articulo">
+      <img src="img/blog3.jpg" alt="Historias de clientes">
+      <h3>Historias de Clientes</h3>
+      <p>Conoce a quienes han confiado en nosotros para momentos especiales.</p>
+      <a href="#" class="leer-mas">Leer más</a>
+    </div>
+  </div>
+</section>
+
+
+    <section id="contacto" class="contacto-section">
+  <h2 class="section-title">Contáctanos</h2>
+
+  <div class="contacto-contenido">
+    <!-- Formulario -->
+    <form class="formulario-contacto">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+
+    <!-- Información de contacto -->
+    <div class="info-contacto">
+      <h3>Información</h3>
+      <p><strong>Teléfono:</strong> +1 (809) 123-4567</p>
+      <p><strong>Email:</strong> contacto@goldeneart.com</p>
+      <p><strong>Dirección:</strong> Av. Principal, Cotui, Prov. Sanchez Ramirez, RD</p>
+      <div class="redes">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section id="faq" class="faq-section">
+  <h2 class="titulo-seccion">Preguntas Frecuentes</h2>
+
+  <div class="faq-contenedor">
+    <div class="faq-item">
+      <button class="faq-pregunta">¿Cuáles son sus políticas de devolución?</button>
+      <div class="faq-respuesta">
+        <p>Se aceptan devoluciones dentro de los 15 días con la presentación del recibo y que el producto esté sin uso.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pregunta">¿Cuánto tardan los envíos?</button>
+      <div class="faq-respuesta">
+        <p>Los envíos nacionales tardan entre 3 y 5 días hábiles. Envíos internacionales entre 7 y 15 días.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pregunta">¿Qué métodos de pago aceptan?</button>
+      <div class="faq-respuesta">
+        <p>Aceptamos tarjetas de crédito, débito, PayPal, transferencias bancarias y pagos en efectivo en tienda física.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pregunta">¿Hacen envíos internacionales?</button>
+      <div class="faq-respuesta">
+        <p>Sí, realizamos envíos a más de 20 países con seguimiento internacional.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pregunta">¿Cómo sé mi talla de anillo?</button>
+      <div class="faq-respuesta">
+        <p>Consulta nuestra guía de tallas o visita nuestra tienda para tomar la medida con nuestros expertos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const preguntas = document.querySelectorAll(".faq-pregunta");
+
+  preguntas.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const respuesta = btn.nextElementSibling;
+
+      // Cierra otras respuestas
+      document.querySelectorAll(".faq-respuesta").forEach((res) => {
+        if (res !== respuesta) res.style.display = "none";
+      });
+
+      // Alterna visibilidad
+      respuesta.style.display =
+        respuesta.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
+
+    <section id="carrito" class="carrito-section">
+  <h2 class="titulo-seccion">Tu Carrito</h2>
+
+  <div class="carrito-contenedor">
+    <!-- Producto 1 -->
+    <div class="carrito-item">
+      <img src="img/producto1.jpg" alt="Anillo de oro">
+      <div class="carrito-detalles">
+        <h3>Anillo de Oro</h3>
+        <p>Talla 7</p>
+        <div class="carrito-controles">
+          <input type="number" value="1" min="1">
+          <span class="precio">$120.00</span>
+          <button class="eliminar-btn">✕</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="carrito-item">
+      <img src="img/producto2.jpg" alt="Collar de plata">
+      <div class="carrito-detalles">
+        <h3>Collar de Plata</h3>
+        <p>Largo 45 cm</p>
+        <div class="carrito-controles">
+          <input type="number" value="2" min="1">
+          <span class="precio">$90.00</span>
+          <button class="eliminar-btn">✕</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Total -->
+    <div class="carrito-total">
+      <p>Total: <strong>$300.00</strong></p>
+      <div class="carrito-botones">
+        <a href="#productos" class="btn-seguir">Seguir comprando</a>
+        <a href="#" class="btn-pagar">Proceder al pago</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="resumen-pedido" class="checkout-section">
+  <h2 class="titulo-seccion">Resumen del Pedido</h2>
+
+  <div class="resumen-contenedor">
+    <p><strong>Cliente:</strong> Juan Pérez</p>
+
+    <div class="resumen-productos">
+      <div class="resumen-item">
+        <img src="img/producto1.jpg" alt="Anillo de Oro">
+        <div>
+          <h4>Anillo de Oro</h4>
+          <p>Cantidad: 1</p>
+          <p>Subtotal: $120.00</p>
+        </div>
+      </div>
+
+      <div class="resumen-item">
+        <img src="img/producto2.jpg" alt="Collar de Plata">
+        <div>
+          <h4>Collar de Plata</h4>
+          <p>Cantidad: 2</p>
+          <p>Subtotal: $180.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="resumen-total">
+      <p><strong>Total a pagar:</strong> $300.00</p>
+    </div>
+
+    <button class="btn-pagar-final">Confirmar y Pagar</button>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Golden Eart. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <div id="modal-carrito" class="modal-carrito">
+  <div class="contenido-modal">
+    <span class="cerrar" onclick="cerrarCarrito()">&times;</span>
+    <h2>Tu Carrito</h2>
+    <div id="carrito-productos">
+      <p>No hay productos en el carrito.</p>
+    </div>
+  </div>
+</div>
+<div id="modal-usuario" class="modal-carrito">
+  <div class="contenido-modal">
+    <span class="cerrar" onclick="cerrarModalUsuario()">&times;</span>
+    <h2 id="titulo-modal">Iniciar Sesión</h2>
+
+    <div id="form-login">
+      <input type="text" id="login-usuario" placeholder="Usuario" /><br><br>
+      <input type="password" id="login-clave" placeholder="Contraseña" /><br><br>
+      <button onclick="iniciarSesion()">Iniciar Sesión</button><br><br>
+      <p>¿No tienes cuenta? <a href="#" onclick="mostrarRegistro()">Regístrate</a></p>
+    </div>
+
+    <div id="form-registro" style="display: none;">
+      <input type="text" id="registro-usuario" placeholder="Nuevo Usuario" /><br><br>
+      <input type="password" id="registro-clave" placeholder="Contraseña" /><br><br>
+      <button onclick="registrarse()">Registrarse</button><br><br>
+      <p>¿Ya tienes cuenta? <a href="#" onclick="mostrarLogin()">Inicia Sesión</a></p>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
